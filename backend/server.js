@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 app.use(helmet()); // Sets various HTTP headers for security
 
 // CORS Configuration
-const allowedOrigins = process.env.CORS_ORIGIN 
+/*const allowedOrigins = process.env.CORS_ORIGIN 
   ? process.env.CORS_ORIGIN.split(',') 
   : ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'https://she-connect-eight.vercel.app'];
 
@@ -32,6 +32,11 @@ app.use(cors({
   credentials: true,
   methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
+})); */
+
+app.use(cors({
+  origin: true,
+  credentials: true
 }));
 
 // Body parser
