@@ -4,6 +4,10 @@ A complete, production-ready, and highly secure full-stack web application devel
 
 This portal features a visually stunning and responsive **Contact Us** page where users can submit inquiries, alongside a fully protected **Admin Dashboard** which allows foundations administrators to manage, search, and delete incoming forms.
 
+🌐 Frontend: https://she-connect-eight.vercel.app
+
+⚙️ Backend API: https://sheconnect.onrender.com
+
 ---
 
 ## 🌟 Key Features
