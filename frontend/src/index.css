@@ -1,0 +1,111 @@
+/* Global CSS Reset & Setup */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Default: Dark Theme */
+  --bg-primary: #0d0c15;
+  --bg-secondary: #09080e;
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(98, 0, 234, 0.05) 0%, rgba(255, 0, 128, 0.03) 90.1%), #0d0c15;
+  --navbar-bg: rgba(13, 12, 21, 0.6);
+  --navbar-border: rgba(255, 255, 255, 0.05);
+  --text-primary: #f1f2f6;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-title: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  --input-bg: rgba(255, 255, 255, 0.02);
+  --input-border: rgba(255, 255, 255, 0.08);
+  --input-focus-bg: rgba(255, 255, 255, 0.04);
+  --btn-admin-bg: rgba(255, 255, 255, 0.04);
+  --btn-admin-border: rgba(255, 255, 255, 0.1);
+  --scrollbar-track: #0d0c15;
+  --scrollbar-thumb-border: #0d0c15;
+  --table-header-bg: rgba(255, 255, 255, 0.03);
+  --table-header-text: rgba(255, 255, 255, 0.6);
+  --table-border: rgba(255, 255, 255, 0.04);
+  --message-bubble-bg: rgba(255, 255, 255, 0.02);
+  --message-bubble-border: rgba(255, 255, 255, 0.04);
+  --hero-title-gradient: linear-gradient(135deg, #ffffff 30%, #ff69b4 100%);
+}
+
+[data-theme="light"] {
+  /* Light Theme overrides */
+  --bg-primary: #f5f6fa;
+  --bg-secondary: #ffffff;
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(98, 0, 234, 0.03) 0%, rgba(255, 0, 128, 0.02) 90.1%), #f5f6fa;
+  --navbar-bg: rgba(255, 255, 255, 0.75);
+  --navbar-border: rgba(98, 0, 234, 0.08);
+  --text-primary: #2d3748;
+  --text-secondary: rgba(45, 55, 72, 0.85);
+  --text-muted: rgba(45, 55, 72, 0.65);
+  --text-title: #1a202c;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(98, 0, 234, 0.12);
+  --card-shadow: 0 15px 35px rgba(98, 0, 234, 0.06);
+  --input-bg: rgba(98, 0, 234, 0.02);
+  --input-border: rgba(0, 0, 0, 0.15);
+  --input-focus-bg: rgba(255, 255, 255, 1);
+  --btn-admin-bg: rgba(98, 0, 234, 0.05);
+  --btn-admin-border: rgba(98, 0, 234, 0.2);
+  --scrollbar-track: #f5f6fa;
+  --scrollbar-thumb-border: #f5f6fa;
+  --table-header-bg: rgba(98, 0, 234, 0.05);
+  --table-header-text: rgba(45, 55, 72, 0.75);
+  --table-border: rgba(0, 0, 0, 0.08);
+  --message-bubble-bg: rgba(98, 0, 234, 0.03);
+  --message-bubble-border: rgba(98, 0, 234, 0.08);
+  --hero-title-gradient: linear-gradient(135deg, #1a202c 30%, #ff007f 100%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--btn-admin-border);
+  border-radius: 5px;
+  border: 2px solid var(--scrollbar-thumb-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 127, 0.6);
+}
+
+/* Global focus states for Accessibility */
+input:focus-visible, 
+textarea:focus-visible, 
+button:focus-visible, 
+a:focus-visible {
+  outline: 2px solid #ff007f;
+  outline-offset: 4px;
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: rgba(255, 0, 127, 0.3);
+  color: #ffffff;
+}

@@ -1,0 +1,27 @@
+/* Full screen loader */
+.app-loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #0d0c15;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.app-loader {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 0, 127, 0.2);
+  border-top-color: #ff007f;
+  border-radius: 50%;
+  animation: app-spin 1s linear infinite;
+}
+
+@keyframes app-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
